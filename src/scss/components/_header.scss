@@ -81,7 +81,7 @@ header {
 
   .ad-wrap {
     text-align: center;
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(lg) {
       order: -1;
     }
 

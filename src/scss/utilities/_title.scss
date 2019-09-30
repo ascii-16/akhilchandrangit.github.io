@@ -1,0 +1,33 @@
+.section-title {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 3em;
+  @include media-breakpoint-down(lg) {
+    font-size: 2em;
+    text-align: left !important;
+  }
+
+  &.title-red {
+    color: $primary-red;
+  }
+
+  &.title-white {
+    color: #fff;
+  }
+
+  &.title-with-bar {
+    &:after {
+      content: "";
+      display: inline-block;
+      height: 6px;
+      width: 15%;
+      margin-left: 15px;
+      background: $primary-red;
+      @include media-breakpoint-down(lg) {
+        height: 4px;
+        width: 30%;
+        margin-left: 10px;
+      }
+    }
+  }
+}
