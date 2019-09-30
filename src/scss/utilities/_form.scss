@@ -1,0 +1,21 @@
+input {
+  border: 0;
+  background: transparent;
+  height: 100%;
+  width: 100%;
+
+  &:not([type='submit']) {
+    border: 0;
+    border-bottom: 1px solid $secondary-grey;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+button {
+  &:focus {
+    outline: none;
+  }
+}

@@ -1,0 +1,17 @@
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  color: inherit;
+
+  &:hover,
+  &:active {
+    color: inherit;
+  }
+}

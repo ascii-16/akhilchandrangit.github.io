@@ -1,0 +1,41 @@
+.card {
+  border-radius: 0;
+
+  &-bg-black {
+    border: 0;
+
+    .card-body {
+      background: $secondary-black;
+      color: #fff;
+    }
+  }
+
+  &-bg-grey {
+    border: 0;
+
+    .card-body {
+      background: $secondary-grey;
+      color: $secondary-black;
+
+      .article-data {
+        color: grey;
+      }
+    }
+  }
+
+  .card-body {
+    .article-title,
+    .article-data {
+      font-family: $barlow;
+      font-weight: normal;
+    }
+
+    .article-data {
+      text-transform: uppercase;
+    }
+
+    .article-summary {
+      font-family: $lato;
+    }
+  }
+}

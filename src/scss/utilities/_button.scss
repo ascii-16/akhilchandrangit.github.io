@@ -1,0 +1,22 @@
+.btn {
+  padding: 10px;
+  font-family: $barlow;
+  font-weight: normal;
+  font-size: 18px;
+  border: 0;
+  cursor: pointer;
+  box-sizing: border-box;
+  display: inline-block;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 0;
+  color: #fff;
+
+  &-red {
+    background: linear-gradient(135deg, transparent 8px, $primary-red 0px, $primary-red 94%, transparent 94%);
+  }
+
+  &-black {
+    background: linear-gradient(135deg, transparent 8px, $secondary-black 0px, $secondary-black 94%, transparent 94%);
+  }
+}

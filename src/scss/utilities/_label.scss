@@ -1,0 +1,32 @@
+.label {
+  padding: 3px 5px;
+  text-transform: uppercase;
+  font-family: $barlow;
+  font-weight: normal;
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 0;
+    height: 0;
+    border-right: 7px solid transparent;
+  }
+
+  &-red {
+    background: linear-gradient(135deg, transparent 3px, $primary-red 0px, $primary-red 94%, transparent 94%);
+    color: #fff;
+    &:after {
+      border-top: 6px solid $primary-red;
+    }
+  }
+
+  &-black {
+    background: linear-gradient(135deg, transparent 3px, $secondary-black 0px, $secondary-black 94%, transparent 94%);
+    color: #fff;
+    &:after {
+      border-top: 6px solid $secondary-black;
+    }
+  }
+}

@@ -1,0 +1,132 @@
+header {
+  background: $primary-red;
+  padding: 0 20px;
+
+  .logo-wrap {
+    position: relative;
+    @include flexbox();
+    @include align-items(center);
+
+    .ham-icon {
+      position: relative;
+      @include rotate(0deg);
+      @include css3-prefix(transition, .5s ease-in-out);
+      cursor: pointer;
+
+      i {
+        color: #fff;
+        font-size: 26px;
+      }
+
+      span {
+        display: block;
+        position: absolute;
+        height: 4px;
+        width: 100%;
+        background: #fff;
+        border-radius: 9px;
+        opacity: 1;
+        left: 0;
+        @include rotate(0deg);
+        @include css3-prefix(transition, .25s ease-in-out);
+
+        &:nth-child(1) { top: 0 }
+        &:nth-child(2) { top: 18px }
+        &:nth-child(3) { top: 36px }
+      }
+
+      &.open {
+        span {
+          &:nth-child(1) { 
+            top: 18px;
+            @include rotate(135deg);
+          }
+          &:nth-child(2) { 
+            opacity: 0;
+            left: -60px;
+          }
+          &:nth-child(3) { 
+            top: 18px;
+            @include rotate(-135deg);
+          }
+        }
+      }
+    }
+
+    .primary-nav {
+      display: none;
+      position: absolute;
+      top: 100%;
+      width: 80%;
+      z-index: 100;
+
+      ul {
+        background: $primary-red;
+        list-style: none;
+        padding: 5px 15px;
+        > li {
+          padding: 8px 0;
+          border-bottom: 1px solid #fff;
+          &:last-of-type {
+            border: 0;
+          }
+
+          a {
+            color: #fff;
+          }
+        }
+      }
+    }
+  } 
+
+  .ad-wrap {
+    text-align: center;
+    @include media-breakpoint-down(sm) {
+      order: -1;
+    }
+
+    img {
+      max-width: 400px;
+    }
+  }
+
+  .menu-right-wrap {
+    @include flexbox();
+    @include align-items(center);
+    position: relative;
+
+    a, i {
+      color: #fff;
+      font-size: 26px;
+    }
+
+    i {
+      margin-right: 10px;
+    }
+
+    .search-form-wrap {
+      display: none;
+      position: absolute;
+      top: 100%;
+      width: 30vw;
+      z-index: 100;
+      right: 0;
+      @include media-breakpoint-down(sm) {
+        width: 100vw;
+      }
+
+      form {
+        background: $secondary-grey;
+        padding: 10px;
+
+        input, button {
+          width: 100%;
+        }
+
+        input[type='text'] {
+          border-color: $primary-red;
+        }
+      }
+    }
+  }
+}

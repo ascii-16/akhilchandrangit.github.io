@@ -1,0 +1,128 @@
+.home-page {
+  section {
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+
+  .subscribe-wrap {
+    margin: 2% auto;
+    width: 50%;
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
+
+    input {
+      width: 100%;
+    }
+
+    > .row {
+      @include media-breakpoint-down(md) {
+        margin: 0;
+
+        > [class*=col-] {
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  .home-header-article-group {
+    position: relative;
+    z-index: 0;
+    .article-top {
+      margin-bottom: 10px;
+      > .row > .col-12 {
+        &:first-of-type {
+          @include media-breakpoint-down(sm) {
+            order: 2;
+          }
+        }
+      }
+    }
+
+    .article-group-bottom {
+      &.row {
+        margin: 0 -5px;
+        @include media-breakpoint-down(md) {
+          margin: 0;
+        }
+
+        > [class*=col-] {
+          padding: 0 5px;
+          @extend .d-flex;
+          @extend .align-items-stretch;
+          @include media-breakpoint-down(md) {
+            padding: 5px 0;
+          }
+
+          img {
+            height: 150px;
+            @include media-breakpoint-down(md) {
+              height: 100%;
+              width: 100%;
+            }
+          }
+
+          [class*=col-] {
+            display: flex;
+            flex-direction: column;
+          }
+
+          &:nth-child(even) {
+            @include media-breakpoint-up(md) {
+              [class*=col-]:first-of-type {
+                order: 2;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .home-spotlight {
+    background: $secondary-black;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    @include media-breakpoint-down(sm) {
+      padding: 30px 20px;
+    }
+
+    .title {
+      color: $primary-red;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    .img-wrap {
+      margin: 15px 0;
+      img {
+        width: 50%;
+        @include media-breakpoint-down(sm) {
+          width: 100%;
+        }
+      }
+    }
+
+    .article-details {
+      width: 35%;
+      margin: 0 auto;
+      @include media-breakpoint-down(sm) {
+        width: 100%;
+      }
+
+      .article-title {
+        margin: 15px 0;
+      }
+
+      .divider {
+        width: 30%;
+        height: 5px;
+        display: block;
+        margin: 0 auto;
+        background: $primary-red;
+      }
+    }
+  }
+}
