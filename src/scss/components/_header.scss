@@ -1,6 +1,5 @@
 header {
-  background: $primary-red;
-  padding: 0 20px;
+  background: $secondary-red;
 
   .logo-wrap {
     position: relative;
@@ -9,9 +8,13 @@ header {
 
     .ham-icon {
       position: relative;
+      cursor: pointer;
+      background: $primary-red;
+      padding: 20px;
       @include rotate(0deg);
       @include css3-prefix(transition, .5s ease-in-out);
-      cursor: pointer;
+      @include flexbox();
+      @include align-items(center);
 
       i {
         color: #fff;
@@ -53,6 +56,14 @@ header {
       }
     }
 
+    .logo {
+      margin-left: 10px;
+
+      img {
+        width: 250px;
+      }
+    }
+
     .primary-nav {
       display: none;
       position: absolute;
@@ -83,6 +94,7 @@ header {
     text-align: center;
     @include media-breakpoint-down(lg) {
       order: -1;
+      padding: 10px 20px;
     }
 
     img {
@@ -93,15 +105,37 @@ header {
   .menu-right-wrap {
     @include flexbox();
     @include align-items(center);
+    @include justify-content(flex-end);
     position: relative;
 
-    a, i {
-      color: #fff;
-      font-size: 26px;
+    .social-media-plugin {
+      @include media-breakpoint-down(lg) {
+        display: none;
+      }
+      a, i {
+        color: #fff;
+        font-size: 26px;
+      }
+  
+      i {
+        margin-right: 10px;
+      }
     }
 
-    i {
-      margin-right: 10px;
+    .search-icon {
+      background: $primary-red;
+      padding: 5px 10px;
+      border: 1px solid $primary-red;
+      border-top-left-radius: 7px;
+      border-bottom-right-radius: 7px;
+      color: #fff;
+      cursor: pointer;
+      margin: 0 20px;
+      @include media-breakpoint-down(lg) {
+        margin: 0 10px;
+        font-size: 24px;
+        padding: 7px 12px;
+      }
     }
 
     .search-form-wrap {

@@ -157,7 +157,7 @@ $overlay-card-ext : -25px;
           right: 0;
         }
         &.outer-bottom .card-body{
-          top: $overlay-card-ext;
+          bottom: $overlay-card-ext;
         }
         &.outer-right .card-body{
           right: $overlay-card-ext;

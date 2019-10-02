@@ -29,4 +29,12 @@
       border-top: 6px solid $secondary-black;
     }
   }
+
+  &-white {
+    background: linear-gradient(135deg, transparent 3px, #fff 0px, #fff 94%, transparent 94%);
+    color: $secondary-black;
+    &:after {
+      border-top: 6px solid #fff;
+    }
+  }
 }
