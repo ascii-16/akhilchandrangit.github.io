@@ -1,0 +1,20 @@
+section {
+  &.article-group {
+    @extend .container;
+    position: relative;
+    margin-top: 5%;
+    margin-bottom: 5%;
+
+    > .ad-block {
+      width: 60%;
+      margin: 4% auto;
+      @include media-breakpoint-down(md) {
+        width: 100%;
+      }
+    }
+
+    .title-with-bar {
+      margin-bottom: 3%;
+    }
+  }
+}

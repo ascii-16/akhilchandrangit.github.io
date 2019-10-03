@@ -169,4 +169,16 @@ $overlay-card-ext : -25px;
       }
     }
   }
+
+  &.card-reverse {
+    &-md {
+      @include media-breakpoint-down(lg) {
+        >.row > [class^=col-] {
+          &:last-of-type {
+            order: -1;
+          }
+        }
+      }
+    }
+  }
 }

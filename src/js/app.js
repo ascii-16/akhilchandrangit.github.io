@@ -13,6 +13,7 @@ jQuery(document).ready(function ($) {
   // search form toggle
   $('header .menu-right-wrap .search-icon').on('click', function() {
     $('header .menu-right-wrap .search-form-wrap').toggle();
+    $(this).find('i').toggleClass('fa-search fa-times');
   });
 
   // video block carousel

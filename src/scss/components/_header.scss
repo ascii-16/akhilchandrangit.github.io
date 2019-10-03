@@ -77,7 +77,6 @@ header {
         padding: 5px 15px;
         > li {
           padding: 8px 0;
-          border-bottom: 1px solid #fff;
           &:last-of-type {
             border: 0;
           }
@@ -114,7 +113,7 @@ header {
       }
       a, i {
         color: #fff;
-        font-size: 26px;
+        font-size: 18px;
       }
   
       i {
@@ -135,6 +134,12 @@ header {
         margin: 0 10px;
         font-size: 24px;
         padding: 7px 12px;
+      }
+
+      i {
+        &.fa-times {
+          font-size: 19px;
+        }
       }
     }
 

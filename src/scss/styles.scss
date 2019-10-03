@@ -1,3 +1,6 @@
+// Fontaweomse
+@import "fontawesome/font-awesome";
+
 // Bootstrap
 @import "bootstrap/bootstrap";
 
@@ -14,8 +17,10 @@
 @import "utilities/label";
 @import "utilities/form";
 @import "utilities/title";
+@import "utilities/section";
 
 // Components
 @import "components/header";
 @import "components/home";
 @import "components/footer";
+@import "components/states-landing";

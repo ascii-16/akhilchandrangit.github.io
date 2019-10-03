@@ -26,7 +26,29 @@
 
   &:after {
     content: '\f067';
-    font-family: 'Font Awesome 5 Solid';
+    font-family: 'FontAwesome';
     font-weight: 900;
+    font-size: 11px;
+    position: relative;
+    top: -6px;
+    right: -3px;
+  }
+
+  &-search {
+    &:after {
+      content: "\f002";
+    }
+  }
+
+  &-top {
+    &:after {
+      content: "\f176";
+    }
+  }
+
+  &-subscribe {
+    &:after {
+      content: "\f003";
+    }
   }
 }
