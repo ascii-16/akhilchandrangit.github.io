@@ -22,11 +22,21 @@
       height: 6px;
       width: 15%;
       margin-left: 15px;
-      background: $primary-red;
       @include media-breakpoint-down(lg) {
         height: 4px;
         width: 30%;
         margin-left: 10px;
+      }
+    }
+
+    &.title-red {
+      &:after {
+        background: $primary-red;
+      }
+    }
+    &.title-white {
+      &:after {
+        background: #fff;
       }
     }
   }

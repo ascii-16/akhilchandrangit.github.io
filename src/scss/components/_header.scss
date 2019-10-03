@@ -92,7 +92,7 @@ header {
 
   .ad-wrap {
     text-align: center;
-    @include media-breakpoint-down(lg) {
+    @include media-breakpoint-down(md) {
       order: -1;
       padding: 10px 20px;
     }

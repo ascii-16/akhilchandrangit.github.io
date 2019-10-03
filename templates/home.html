@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
     <meta content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" name="viewport" />
     <title>Home page</title>
+    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="../dist/styles/styles.min.css" />
     <script src="https://kit.fontawesome.com/93bd8d84a2.js" crossorigin="anonymous"></script>
   </head>
@@ -43,7 +44,7 @@
           <div class="search-form-wrap">
             <form class="row no-gutters">
               <div class="col-9">
-                <input type="text" value="">
+                <input type="text" value="" placeholder="Enter keyword">
               </div>
               <div class="col-3"><button class="btn btn-red">Search</button></div>
             </form>
@@ -57,10 +58,10 @@
         <div class="subscribe-wrap container">
           <div class="row">
             <div class="col-9">
-              <input type="text" value="Signup">
+              <input type="text" placeholder="Enter email id">
             </div>
             <div class="col-3">
-              <input type="submit" class="btn btn-red" value="subscribe">
+              <input type="submit" class="btn btn-red btn-subscribe" value="subscribe">
             </div>
           </div>
         </div>
@@ -182,6 +183,19 @@
         </div>
         <h2 class="title section-title title-with-bar title-red text-left">States</h2>
         <div class="row article-cards no-gutters">
+          <div class="nav-route">
+            <div class="mob-nav">
+              <span class="title">andhra</span>
+              <i class="fas fa-angle-down"></i>
+            </div>
+            <ul>
+              <li><a href="#!"><i class="fas fa-plus"></i>andhra</a></li>
+              <li><a href="#!"><i class="fas fa-plus"></i>kerala</a></li>
+              <li><a href="#!"><i class="fas fa-plus"></i>karnataka</a></li>
+              <li><a href="#!"><i class="fas fa-plus"></i>tamilnadu</a></li>
+              <li><a href="#!"><i class="fas fa-plus"></i>telengana</a></li>
+            </ul>
+          </div>
           <div class="col-lg-8 col-12 article-top">
             <div class="card article card-overlay card-overlay-top-left outer-top">
               <div class="row no-gutters">
@@ -387,9 +401,9 @@
         <div class="popular-articles">
           <div class="title-wrap row">
             <div class="title">
-              <span>most</span>
-              <span>popular</span>
-              <span>articles</span>
+              <div><span>most</span></div>
+              <div><span>popular</span></div>
+              <div><span>articles</span></div>
             </div>
             <div class="icon"><i class="fas fa-thumbs-up"></i></div>
           </div>
@@ -410,6 +424,103 @@
             <div class="col-lg-4 col-12 btn-wrap">
               <a href="#!" class="btn btn-red">more</a>
             </div>
+          </div>
+        </div>
+        <div class="ad-block">
+          <img src="https://i.postimg.cc/dVPNghYp/2-Ad-Banner-728-x-90.jpg">
+        </div>
+      </section>
+
+      <!--video section-->
+      <section class="video-block">
+        <h2 class="title section-title title-with-bar title-white">videos</h2>
+        <div class="video-wrap">
+          <div class="card">
+            <a href="#!"> 
+              <div class="img-wrap">
+                <img src="https://picsum.photos/300/600">
+                <i class="far fa-play-circle"></i>
+                <span></span>
+              </div>
+              <div class="card-body">
+                Lorem ipsum
+              </div>
+            </a>
+          </div>
+          <div class="card">
+            <a href="#!"> 
+              <div class="img-wrap">
+                <img src="https://picsum.photos/300/600">
+                <i class="far fa-play-circle"></i>
+                <span></span>
+              </div>
+              <div class="card-body">
+                Lorem ipsum
+              </div>
+            </a>
+          </div>
+          <div class="card">
+            <a href="#!"> 
+              <div class="img-wrap">
+                <img src="https://picsum.photos/300/600">
+                <i class="far fa-play-circle"></i>
+                <span></span>
+              </div>
+              <div class="card-body">
+                Lorem ipsum
+              </div>
+            </a>
+          </div>
+          <div class="card">
+            <a href="#!"> 
+              <div class="img-wrap">
+                <img src="https://picsum.photos/300/600">
+                <i class="far fa-play-circle"></i>
+                <span></span>
+              </div>
+              <div class="card-body">
+                Lorem ipsum
+              </div>
+            </a>
+          </div>
+          <div class="ad-wrap">
+            <img src="https://i.postimg.cc/MGw8dpqQ/Video-gallery-add.jpg">
+          </div>
+          <div class="card">
+            <a href="#!"> 
+              <div class="img-wrap">
+                <img src="https://picsum.photos/300/600">
+                <i class="far fa-play-circle"></i>
+                <span></span>
+              </div>
+              <div class="card-body">
+                Lorem ipsum
+              </div>
+            </a>
+          </div>
+          <div class="card">
+            <a href="#!"> 
+              <div class="img-wrap">
+                <img src="https://picsum.photos/300/600">
+                <i class="far fa-play-circle"></i>
+                <span></span>
+              </div>
+              <div class="card-body">
+                Lorem ipsum
+              </div>
+            </a>
+          </div>
+          <div class="card">
+            <a href="#!"> 
+              <div class="img-wrap">
+                <img src="https://picsum.photos/300/600">
+                <i class="far fa-play-circle"></i>
+                <span></span>
+              </div>
+              <div class="card-body">
+                Lorem ipsum
+              </div>
+            </a>
           </div>
         </div>
       </section>
@@ -501,9 +612,9 @@
         <div class="popular-articles">
           <div class="title-wrap row">
             <div class="title">
-              <span>most</span>
-              <span>popular</span>
-              <span>articles</span>
+              <div><span>most</span></div>
+              <div><span>popular</span></div>
+              <div><span>articles</span></div>
             </div>
             <div class="icon"><i class="fas fa-thumbs-up"></i></div>
           </div>
@@ -797,7 +908,74 @@
         </div>
       </section>
     </main>
+    <footer>
+      <div class="nav-top-wrap">
+        <nav class="nav-top container">
+          <ul>
+            <li><a href="#!">news</a></li>
+            <li><a href="#!">states</a></li>
+            <li><a href="#!">features</a></li>
+            <li><a href="#!">videos</a></li>
+            <li><a href="#!">flix</a></li>
+            <li><a href="#!">social</a></li>
+            <li><a href="#!">voices</a></li>
+            <li><a href="#!">atom</a></li>
+            <li><a href="#!">delve</a></li>
+            <li><a href="#!">health</a></li>
+            <li><a href="#!">money</a></li>
+            <li><a href="#!">sports</a></li>
+          </ul>
+          <a href="#top" class="btn btn-red">top</a>
+        </nav>
+      </div>
+      <div class="footer-credits">
+        <div class="container">
+          <div class="social-media-plugin">
+            <a href="#"><i class="fab fa-facebook-square"></i></a>
+            <a href="#"><i class="fab fa-twitter-square"></i></a>
+            <a href="#"><i class="fab fa-google-plus-square"></i></a>
+          </div>
+          <div class="logo-wrap">
+            <img src="../dist/images/logo-white-bg.png">
+          </div>
+        </div>
+        <div class="app-download-wrap">
+          <div class="app-store-btn-wrap">
+            <div class="title">download our new app today</div>
+            <div class="link-wrap">
+              <a href="#!" class="button"><img src="../dist/images/google-play-badge.png"></a>
+              <a href="#!" class="button"><img src="../dist/images/app-store-button.png"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-lg-9 nav-bottom-wrap">
+              <ul>
+                <li><a href="#!">About</a></li>
+                <li><a href="#!">Contact</a></li>
+                <li class="divider"><a href="#!">Careers</a></li>
+                <li><a href="#!">Privacy policy</a></li>
+                <li><a href="#!">Terms of service</a></li>
+                <li class="divider"><a href="#!">Sitemap</a></li>
+                <li><a href="#!">Advertice</a></li>
+                <li><a href="#!">Adchoices</a></li>
+              </ul>
+            </div>
+            <div class="col-6 col-lg-3 copyright-wrap">
+              <p>&copy;2018 the news minute</p>
+            </div>
+            <div class="col-6 col-lg-12 bottom-text-wrap">
+              <p>website by influx</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="../dist/scripts/scripts.min.js"></script>
   </body>
 </html>

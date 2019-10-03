@@ -1,0 +1,188 @@
+footer {
+  .nav-top-wrap {
+    background: $secondary-red;
+    color: #fff;
+    padding: 10px 0;
+
+    > .nav-top {
+      position: relative;
+      > ul {
+        list-style: none;
+        font-family: $barlow;
+        text-transform: uppercase;
+        margin: 0;
+        padding: 0;
+        @include flexbox();
+        @include justify-content(space-between);
+        @include media-breakpoint-up(lg) {
+          width: 90%;
+        }
+        @include media-breakpoint-down(sm) {
+          flex-wrap: wrap;
+          @include justify-content(space-evenly);
+        }
+
+        > li {
+          margin-right: 20px;
+          @include media-breakpoint-down(sm) {
+            margin-bottom: 10px;
+            margin-right: 10px;
+            width: 20%;
+            text-align: center;
+          }
+        }
+      }
+
+      .btn {
+        position: absolute;
+        top: -30px;
+        right: 0;
+        font-size: 14px;
+        @include media-breakpoint-up(lg) {
+          right: 15px;
+        }
+        @include media-breakpoint-down(sm) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .footer-credits {
+    > .container {
+      @include flexbox();
+      @include justify-content(space-between);
+      @include align-items(center);
+    }
+    padding-top: 30px;
+    padding-bottom: 0;
+    box-shadow: 0 8px 6px -6px $secondary-grey;
+    position: relative;
+    z-index: 1;
+
+    .social-media-plugin {
+      i {
+        font-size: 25px;
+        margin-right: 10px;
+      }
+    }
+
+    .app-download-wrap {
+      @include flexbox();
+      @include justify-content(center);
+
+      .app-store-btn-wrap {
+        box-shadow: 0 8px 6px -6px $secondary-grey;
+        border-bottom: 1px solid transparent;
+        padding: 0 10px 24px 10px;
+        margin: 0 -6px;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        position: relative;
+        bottom: -20px;
+        background: #fff;
+
+        .title {
+          text-align: center;
+          font-family: $barlow;
+          text-transform: uppercase;
+        }
+        .link-wrap {
+          @include flexbox();
+          margin: 10px;
+          margin-bottom: -7px;
+
+          .button {
+            margin: 0 5px;
+            img {
+              width: 120px;
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    padding-top: 40px;
+    background: #f9f9f9;
+
+    .nav-bottom-wrap {
+      > ul {
+        padding: 0;
+        list-style: none;
+        color: grey;
+        @include flexbox();
+        @include media-breakpoint-down(sm) {
+          flex-wrap: wrap;
+          @include justify-content(space-evenly);
+        }
+
+        > li {
+          padding-right: 30px;
+          font-size: 15px;
+          @include media-breakpoint-down(lg) {
+            padding-right: 15px;
+          }
+          @include media-breakpoint-down(md) {
+            padding-right: 2%;
+          }
+          @include media-breakpoint-down(sm) {
+            width: 33.33%;
+            text-align: center;
+            padding-bottom: 10px;
+          }
+
+          &:last-of-type {
+            padding-right: 0;
+          }
+          &.divider:after {
+            content: "|";
+            margin-left: 30px;
+            @include media-breakpoint-down(lg) {
+              margin-left: 15px;
+            }
+            @include media-breakpoint-down(md) {
+              margin-left: 13px;
+            }
+            @include media-breakpoint-down(sm) {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+
+    .copyright-wrap {
+      text-align: right;
+      color: grey;
+      text-transform: capitalize;
+      font-size: 15px;
+      @include media-breakpoint-down(sm) {
+        font-size: 12px;
+      }
+      @include media-breakpoint-down(md) {
+        text-align: left;
+        padding-top: 20px;
+      }
+    }
+
+    .bottom-text-wrap {
+      text-transform: uppercase;
+      font-family: $barlow;
+      font-size: 14px;
+      @include media-breakpoint-down(md) {
+        text-align: right;
+        padding-top: 20px;
+      }
+      @include media-breakpoint-down(sm) {
+        font-size: 11px;
+      }
+      @include media-breakpoint-up(lg) {
+        text-align: center;
+        padding-top: 10px;
+      }
+    }
+  }
+}
