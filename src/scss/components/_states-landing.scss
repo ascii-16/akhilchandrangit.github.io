@@ -1,5 +1,202 @@
 .states-landing-page {
-  .articles-group {
-    @extend .container;
+  .page-header {
+    @include flexbox();
+    flex-direction: column;
+    @include align-items(center);
+    margin-top: 2%;
+
+    .subscribe-wrap {
+      margin: 0 0 2%;
+      width: 60%;
+      @include media-breakpoint-down(md) {
+        display: none;
+      }
+  
+      input {
+        width: 100%;
+      }
+  
+      > .row {
+        @include media-breakpoint-down(md) {
+          margin: 0;
+  
+          > [class*=col-] {
+            padding: 0;
+          }
+        }
+      }
+    }
+
+    .page-title {
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 3em;
+
+      @include media-breakpoint-down(md) {
+        font-size: 2em;
+      }
+    }
+
+    .nav-route {
+      margin: 10px 0 0;
+      @include media-breakpoint-down(md) {
+        width: 100%;
+      }
+
+      .mob-nav {
+        @include media-breakpoint-up(lg) {
+          display: none;
+        }
+        position: relative;
+
+        .prettydropdown {
+          width: 100% !important;
+          ul {
+            background: $primary-red;
+            color: #fff;
+            text-transform: uppercase;
+            padding: 10px;
+            font-family: $barlow;
+            font-size: 18px;
+            width: 100%;
+            padding: 0;
+            border: 0;
+
+            > li {
+              width: 100% !important;
+
+              > span.checked {
+                display: none;
+              }
+
+              &.selected {
+                &:before {
+                  display: none;
+                }
+                &:after {
+                  content: "\f107";
+                  font-family: FontAwesome;
+                  font-weight: 900;
+                  font-size: 30px;
+                  color: #fff;
+                  position: absolute;
+                  right: 19px;
+                  top: 0;
+                  border: 0;
+                  height: auto;
+                  pointer-events: none;
+                  background: transparent;
+                }
+              }
+            }
+
+            &.active {
+              background: rgba($primary-red, 0.9);
+
+              > li.selected {
+                background: $primary-red;
+                border: 0;
+
+                &:after {
+                  @include rotate(180deg);
+                }
+              }
+
+              > li {
+                border-bottom: 1px solid rgba(#fff, 0.5);
+              }
+            }
+          }
+        }
+
+        // select.states-select {
+        //   background: $primary-red;
+        //   color: #fff;
+        //   text-transform: uppercase;
+        //   padding: 10px;
+        //   font-family: $barlow;
+        //   font-size: 24px;
+        //   width: 100%;
+        //   -webkit-appearance: none;
+        //   -moz-appearance: none;
+        //   appearance: none;  
+        // }
+
+        // &:after {
+        //   content: "\f107";
+        //   font-family: FontAwesome;
+        //   font-weight: 900;
+        //   font-size: 30px;
+        //   color: #fff;
+        //   position: absolute;
+        //   right: 19px;
+        //   top: 7px;
+        //   pointer-events: none;
+        // }
+
+        &.open {
+          &::after {
+            content: "\f106";
+          }
+        }
+      }
+
+      ul.nav-lg {
+        @include flexbox();
+        @include media-breakpoint-down(md) {
+          display: none;
+        }
+
+        li {
+          text-align: right;
+          text-transform: uppercase;
+          font-family: $barlow;
+          padding-right: 15px;
+
+          &:last-of-type {
+            padding-right: 0;
+          }
+
+
+          > * {
+            background: $primary-red;
+            color: #fff;
+            padding: 3px;
+            padding-left: 10px;
+            font-size: 13px;
+            cursor: pointer;
+
+            i {
+              font-size: 11px;
+              margin-right: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .article-group {
+    .section-title {
+      margin-bottom: 10px;
+    }
+
+    .article-top {
+      padding-bottom: 30px;
+    }
+
+    .article-group-bottom {
+      > [class^=col-] {
+        padding-bottom: 20px;
+      }
+    }
+
+    .card {
+      [class^=col-] {
+        img {
+          height: 100%;
+        }
+      }
+    }
   }
 }

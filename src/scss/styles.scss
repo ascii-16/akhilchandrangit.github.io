@@ -1,5 +1,8 @@
 // Fontaweomse
-@import "fontawesome/font-awesome";
+@import "plugins/fontawesome/font-awesome";
+
+// Prettydropdown
+@import "plugins/prettydropdown/prettydropdowns";
 
 // Bootstrap
 @import "bootstrap/bootstrap";
@@ -10,6 +13,7 @@
 @import "mixins";
 @import "typography";
 @import "basic";
+@import "animation";
 
 // Utilities
 @import "utilities/button";

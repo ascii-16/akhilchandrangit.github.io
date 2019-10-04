@@ -16,5 +16,60 @@ section {
     .title-with-bar {
       margin-bottom: 3%;
     }
+
+    > .btn-wrap {
+      margin: 3% 0;
+      @include media-breakpoint-down(md) {
+        text-align: center;
+      }
+    }
+  }
+
+  &.newsletter-subscription {
+    background: $secondary-red;
+
+    > .container {
+      color: #fff;
+      padding-top: 2%;
+      padding-bottom: 2%;
+      background: url(../../dist/images/newsletter-bg.jpg);
+      background-size: 100% 100%;
+      @include media-breakpoint-down(md) {
+        padding-top: 12%;
+        padding-bottom: 12%;
+        background-size: cover;
+        background-position: 70%;
+      }
+
+      > div {
+        @include flexbox();
+        @include justify-content(center);
+      }
+
+      .ad-block{
+        @include media-breakpoint-down(md) {
+          display: none;
+        }
+        img {
+          width: 300px;
+        }
+      }
+
+      .form-block {
+        .title {
+          text-transform: uppercase;
+        }
+        form {
+          background: #fff;
+          padding: 10px;
+          input {
+            border: 0;
+          }
+          @include media-breakpoint-up(lg) {
+            width: 70%;
+          }
+        }
+      }
+    }
   }
 }

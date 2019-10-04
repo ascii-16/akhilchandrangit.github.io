@@ -1,155 +1,165 @@
 // flexbox
 @mixin flexbox() {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: flex;
+}
+
+@mixin align-items($value) {
+  @if $value == flex-start {
+    -webkit-box-align: start;
+    -moz-box-align: start;
+    -ms-flex-align: start;
+  } @else if $value == flex-end {
+    -webkit-box-align: end;
+    -moz-box-align: end;
+    -ms-flex-align: end;
+  } @else {
+    -webkit-box-align: $value;
+    -moz-box-align: $value;
+    -ms-flex-align: $value;
   }
-  
-  @mixin align-items($value) {
-    @if $value == flex-start {
-      -webkit-box-align: start;
-      -moz-box-align: start;
-      -ms-flex-align: start;
-    } @else if $value == flex-end {
-      -webkit-box-align: end;
-      -moz-box-align: end;
-      -ms-flex-align: end;
-    } @else {
-      -webkit-box-align: $value;
-      -moz-box-align: $value;
-      -ms-flex-align: $value;
-    }
-    -webkit-align-items: $value;
-    align-items: $value;
+  -webkit-align-items: $value;
+  align-items: $value;
+}
+
+@mixin justify-content($value: flex-start) {
+  @if $value == flex-start {
+    -webkit-box-pack: start;
+    -moz-box-pack: start;
+    -ms-flex-pack: start;
+  } @else if $value == flex-end {
+    -webkit-box-pack: end;
+    -moz-box-pack: end;
+    -ms-flex-pack: end;
+  } @else if $value == space-between {
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
+  } @else if $value == space-around {
+    -ms-flex-pack: distribute;
+  } @else {
+    -webkit-box-pack: $value;
+    -moz-box-pack: $value;
+    -ms-flex-pack: $value;
   }
-  
-  @mixin justify-content($value: flex-start) {
-    @if $value == flex-start {
-      -webkit-box-pack: start;
-      -moz-box-pack: start;
-      -ms-flex-pack: start;
-    } @else if $value == flex-end {
-      -webkit-box-pack: end;
-      -moz-box-pack: end;
-      -ms-flex-pack: end;
-    } @else if $value == space-between {
-      -webkit-box-pack: justify;
-      -moz-box-pack: justify;
-      -ms-flex-pack: justify;
-    } @else if $value == space-around {
-      -ms-flex-pack: distribute;
-    } @else {
-      -webkit-box-pack: $value;
-      -moz-box-pack: $value;
-      -ms-flex-pack: $value;
-    }
-    -webkit-justify-content: $value;
-    justify-content: $value;
+  -webkit-justify-content: $value;
+  justify-content: $value;
+}
+
+@mixin align-content($value: stretch) {
+  // No Webkit Box Fallback.
+  -webkit-align-content: $value;
+  @if $value == flex-start {
+    -ms-flex-line-pack: start;
+  } @else if $value == flex-end {
+    -ms-flex-line-pack: end;
+  } @else {
+    -ms-flex-line-pack: $value;
   }
-  
-  @mixin align-content($value: stretch) {
-    // No Webkit Box Fallback.
-    -webkit-align-content: $value;
-    @if $value == flex-start {
-      -ms-flex-line-pack: start;
-    } @else if $value == flex-end {
-      -ms-flex-line-pack: end;
-    } @else {
-      -ms-flex-line-pack: $value;
-    }
-    align-content: $value;
+  align-content: $value;
+}
+
+@mixin align-self($value: auto) {
+  // No Webkit Box Fallback.
+  -webkit-align-self: $value;
+  @if $value == flex-start {
+    -ms-flex-item-align: start;
+  } @else if $value == flex-end {
+    -ms-flex-item-align: end;
+  } @else {
+    -ms-flex-item-align: $value;
   }
-  
-  @mixin align-self($value: auto) {
-    // No Webkit Box Fallback.
-    -webkit-align-self: $value;
-    @if $value == flex-start {
-      -ms-flex-item-align: start;
-    } @else if $value == flex-end {
-      -ms-flex-item-align: end;
-    } @else {
-      -ms-flex-item-align: $value;
-    }
-    align-self: $value;
+  align-self: $value;
+}
+
+// rotate
+@mixin rotate($degrees) {
+  -webkit-transform: rotate($degrees);
+  -moz-transform: rotate($degrees);
+  -ms-transform: rotate($degrees);
+  -o-transform: rotate($degrees);
+  transform: rotate($degrees);
+}
+
+// custom cross browser mixin
+@mixin css3-prefix($prop, $value) {
+  -webkit-#{$prop}: #{$value};
+  -moz-#{$prop}: #{$value};
+  -ms-#{$prop}: #{$value};
+  -o-#{$prop}: #{$value};
+  #{$prop}: #{$value};
+}
+
+// Padding mixin
+@mixin padding($top, $right, $bottom, $left) {
+  padding-top: $top;
+  padding-right: $right;
+  padding-bottom: $bottom;
+  padding-left: $left;
+}
+// Margin mixin
+@mixin margin($top, $right, $bottom, $left) {
+  margin-top: $top;
+  margin-right: $right;
+  margin-bottom: $bottom;
+  margin-left: $left;
+}
+
+// IE and Edge custom mixin
+@mixin ie {
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    @content;
   }
-  
-  // rotate
-  @mixin rotate($degrees) {
-    -webkit-transform: rotate($degrees);
-    -moz-transform: rotate($degrees);
-    -ms-transform: rotate($degrees);
-    -o-transform: rotate($degrees);
-    transform: rotate($degrees);
+}
+
+@mixin edge {
+  @supports (-ms-ime-align:auto) {
+    @content;
   }
-  
-  // custom cross browser mixin
-  @mixin css3-prefix($prop, $value) {
-    -webkit-#{$prop}: #{$value};
-    -moz-#{$prop}: #{$value};
-    -ms-#{$prop}: #{$value};
-    -o-#{$prop}: #{$value};
-    #{$prop}: #{$value};
+}
+
+@mixin ie-edge {
+  @include ie {
+    @content;
   }
-  
-  // Padding mixin
-  @mixin padding($top, $right, $bottom, $left) {
-    padding-top: $top;
-    padding-right: $right;
-    padding-bottom: $bottom;
-    padding-left: $left;
+  @include edge {
+    @content;
   }
-  // Margin mixin
-  @mixin margin($top, $right, $bottom, $left) {
-    margin-top: $top;
-    margin-right: $right;
-    margin-bottom: $bottom;
-    margin-left: $left;
+}
+
+// placeholder 
+@mixin placeholder() {
+  &::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    @content;
   }
-  
-  // IE and Edge custom mixin
-  @mixin ie {
-    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-      @content;
-    }
+  &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    @content;
   }
-  
-  @mixin edge {
-    @supports (-ms-ime-align:auto) {
-      @content;
-    }
+  &::-moz-placeholder { /* Mozilla Firefox 19+ */
+    @content;
   }
-  
-  @mixin ie-edge {
-    @include ie {
-      @content;
-    }
-    @include edge {
-      @content;
-    }
+  &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    @content;
   }
-  
-  // placeholder 
-  @mixin placeholder() {
-    &::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-      @content;
-    }
-    &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-      @content;
-    }
-    &::-moz-placeholder { /* Mozilla Firefox 19+ */
-      @content;
-    }
-    &:-ms-input-placeholder { /* Internet Explorer 10-11 */
-      @content;
-    }
-    &::-ms-input-placeholder { /* Microsoft Edge */
-      @content;
-    }
-  
-    &::placeholder { 
-      @content;
-    }
+  &::-ms-input-placeholder { /* Microsoft Edge */
+    @content;
+  }
+
+  &::placeholder { 
+    @content;
+  }
+}
+
+// Gradient
+
+@mixin gradient($value, $content:null) {
+  background: -webkit-linear-gradient($value) $content;
+  background: -moz-linear-gradient($value) $content;
+  background: -o-linear-gradient($value) $content;
+  background: -ms-linear-gradient($value) $content;
+  background: linear-gradient($value) $content;
 }

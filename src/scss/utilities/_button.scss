@@ -13,11 +13,13 @@
   color: #fff;
 
   &-red {
-    background: linear-gradient(135deg, transparent 8px, $primary-red 0px, $primary-red 94%, transparent 94%);
+    $value : 135deg, transparent 8px, $primary-red 0px, $primary-red 94%, transparent 94%;
+    @include gradient($value, !important);
   }
 
   &-black {
-    background: linear-gradient(135deg, transparent 8px, $secondary-black 0px, $secondary-black 94%, transparent 94%);
+    $value : 135deg, transparent 8px, $secondary-black 0px, $secondary-black 94%, transparent 94%;
+    @include gradient($value, !important);
   }
 
   &:hover {
